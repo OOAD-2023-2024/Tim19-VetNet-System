@@ -38,6 +38,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/Obavjestenje/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/Obavjestenje/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/Obavjestenje/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/Obavjestenje/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/Obavjestenje/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mirza/source/repos/VetNet/VetNet/Views/Poslovnica/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -68,6 +88,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/mirza/source/repos/VetNet/VetNet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/VeterinarskaSluzba/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/VeterinarskaSluzba/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/VeterinarskaSluzba/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/VeterinarskaSluzba/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/source/repos/VetNet/VetNet/Views/VeterinarskaSluzba/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/mirza/source/repos/VetNet/VetNet/Views/_ViewImports.cshtml]

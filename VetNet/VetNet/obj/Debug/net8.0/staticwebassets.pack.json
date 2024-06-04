@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\VetNet.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mirza\\source\\repos\\VetNet\\VetNet\\wwwroot\\VetNet logo.png",
+      "PackagePath": "staticwebassets\\VetNet logo.png"
+    },
+    {
       "Id": "C:\\Users\\mirza\\source\\repos\\VetNet\\VetNet\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pfPR6yvteAkMF3/cEd/gKcPBvlAkjcQcc1eXBaVF3e4=",
+  "Hash": "diE/xQbbAXQjEoqVYmy5RgTA+x4Ob2VJQdpsjLwgT1o=",
   "Source": "VetNet",
   "BasePath": "_content/VetNet",
   "Mode": "Default",
@@ -2333,6 +2333,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\mirza\\source\\repos\\VetNet\\VetNet\\wwwroot\\VetNet logo.png",
+      "SourceId": "VetNet",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mirza\\source\\repos\\VetNet\\VetNet\\wwwroot\\",
+      "BasePath": "_content/VetNet",
+      "RelativePath": "VetNet logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\VetNet logo.png"
     }
   ]
 }

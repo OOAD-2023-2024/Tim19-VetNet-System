@@ -10,8 +10,18 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+//@mirza
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("Vlasnik", policy => policy.RequireRole("Vlasnik"));
+    options.AddPolicy("Apotekar", policy => policy.RequireRole("Apotekar"));
+    options.AddPolicy("Veterinar", policy => policy.RequireRole("Apotekar"));
+});
+//promijenio dio iznad
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
