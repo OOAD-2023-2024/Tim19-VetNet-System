@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-VetNet-69ece409-79dd-4b0e-867d-311b425156e5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("VetNet")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+389b66bae3a7bb49f920c42a3b3aed83f2409eec")]
 [assembly: System.Reflection.AssemblyProductAttribute("VetNet")]

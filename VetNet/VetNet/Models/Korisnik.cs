@@ -7,7 +7,12 @@ namespace VetNet.Models
 {
     public class Korisnik : IdentityUser
     {
-        public enum Uloga { administrator, veterinar, apotekar,vlasnik};
+        public enum Specijalizacija { KlinickaMedicinaMalihZivotinja, 
+            Parazitologija, 
+            SigurnostHrane, 
+            TeriogenelogijaDomacihZivotinja,
+            VeterinarskaEpidemiologijaIEkonomika,
+            ZarazneBolestiZivotinja};
         
         [Required(ErrorMessage = "Obavezna vrijednost")]
         public string ime { get; set; }
@@ -19,18 +24,19 @@ namespace VetNet.Models
         public string adresa { get; set; }
         [Required(ErrorMessage = "Obavezna vrijednost")]
         public DateOnly datumRodjenja { get; set; }
-        [Required(ErrorMessage = "Obavezna vrijednost")]
-        public Uloga uloga { get; set; }
+
+        [AllowNull]
+        public Specijalizacija? specijalizacija { get; set; }
 
         [ForeignKey("Poslovnica")]
         [AllowNull]
-        public int PoslovnicaId { get; set; }
+        public int? PoslovnicaId { get; set; }
 
         public Poslovnica Poslovnica { get; set; }
 
         [ForeignKey("VeterinarskaSluzba")]
         [AllowNull]
-        public int VeterinarskaSluzbaId { get; set; }
+        public int? VeterinarskaSluzbaId { get; set; }
 
         public VeterinarskaSluzba VeterinarskaSluzba { get; set; }
 

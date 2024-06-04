@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\VetNet",
+    "\\VetNet\\Data",
+    "\\VetNet\\Data\\Migrations",
+    "\\VetNet\\Models"
+  ],
+  "SelectedNode": "\\VetNet\\Data\\Migrations\\20240514134025_emigracija.cs",
+  "PreviewInSolutionExplorer": false
+}

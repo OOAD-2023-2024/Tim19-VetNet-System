@@ -24,7 +24,18 @@ namespace VetNet.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Korisnik>().ToTable("korisnici");
+            //builder.Entity<Korisnik>().ToTable("korisnici");
+            builder.Entity<Korisnik>(b =>
+            {
+                b.Property(u => u.ime);
+                b.Property(u => u.prezime);
+                b.Property(u => u.spol);
+                b.Property(u => u.adresa);
+                b.Property(u => u.datumRodjenja);
+                b.Property(u => u.specijalizacija);
+                b.Property(u => u.PoslovnicaId);
+                b.Property(u => u.VeterinarskaSluzbaId);
+            });
             builder.Entity<Ljubimac>().ToTable("ljubimci");
             builder.Entity<Pregled>().ToTable("pregledi");
             builder.Entity<Izvjestaj>().ToTable("izvjestaji");
