@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using VetNet.Models;
 
 namespace VetNet.Controllers
 {
+    [Authorize(Roles = "Administrator, Veterinar")]
     public class VeterinarskaSluzbaController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -99,14 +101,12 @@ namespace VetNet.Controllers
                 {
                     _context.Update(veterinarskaSluzba);
                     await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
+                } catch (DbUpdateConcurrencyException)
                 {
                     if (!VeterinarskaSluzbaExists(veterinarskaSluzba.id))
                     {
                         return NotFound();
-                    }
-                    else
+                    } else
                     {
                         throw;
                     }
