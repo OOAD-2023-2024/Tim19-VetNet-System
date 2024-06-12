@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj": {}
+    "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj": {
+    "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj",
+        "projectUniqueName": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj",
         "projectName": "VetNet",
-        "projectPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj",
-        "packagesPath": "C:\\Users\\mirza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\obj\\",
+        "projectPath": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj",
+        "packagesPath": "C:\\Users\\haris\\.nuget\\packages\\",
+        "outputPath": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mirza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\haris\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -47,23 +47,25 @@
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )"
+              "version": "[8.0.6, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -89,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

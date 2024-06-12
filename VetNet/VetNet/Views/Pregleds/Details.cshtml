@@ -1,0 +1,66 @@
+﻿@model VetNet.Models.Pregled
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pregled</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.datumVrijeme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.datumVrijeme)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.razlog)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.razlog)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.postupak)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.postupak)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dijagnoza)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dijagnoza)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.napomena)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.napomena)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.terapija)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.terapija)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ljubimac)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ljubimac.ime)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Korisnik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Korisnik.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
