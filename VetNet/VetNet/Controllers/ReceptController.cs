@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -49,6 +50,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Recepts/Create
+        [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
             ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
@@ -61,6 +63,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
             if (ModelState.IsValid)
@@ -75,6 +78,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Recepts/Edit/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -97,6 +101,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
             if (id != recept.Id)
@@ -130,6 +135,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Recepts/Delete/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -152,6 +158,7 @@ namespace VetNet.Controllers
         // POST: Recepts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var recept = await _context.Recept.FindAsync(id);

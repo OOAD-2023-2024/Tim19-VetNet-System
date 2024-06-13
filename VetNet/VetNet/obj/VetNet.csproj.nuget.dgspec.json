@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj": {}
+    "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj": {}
   },
   "projects": {
-    "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj": {
+    "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj",
+        "projectUniqueName": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj",
         "projectName": "VetNet",
-        "projectPath": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\VetNet.csproj",
-        "packagesPath": "C:\\Users\\haris\\.nuget\\packages\\",
-        "outputPath": "C:\\ETF\\Objektno-orijentisana-analiza-i-dizajn\\VetNet\\VetNet\\VetNet\\obj\\",
+        "projectPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\VetNet.csproj",
+        "packagesPath": "C:\\Users\\mirza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\haris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mirza\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -91,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

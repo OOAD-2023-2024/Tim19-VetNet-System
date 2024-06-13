@@ -25,17 +25,36 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Početna</a>
                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>-->
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Izvjestaj" asp-action="Index">Izvještaji</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Obavjestenje" asp-action="Index">Obavještenja</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Administrator") || User.IsInRole("Veterinar") || User.IsInRole("Apotekar"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Ljubimac" asp-action="Index">Ljubimci</a>
+                            </li>
+                            //TODO: prikaz samo za jedan konkretan recept a ne sve
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Recept" asp-action="Index">Recepti</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Administrator") || User.IsInRole("Veterinar"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Pregled" asp-action="Index">Pregledi</a>
+                            </li>
+                        }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Poslovnica" asp-action="Index">Poslovnice</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="VeterinarskaSluzba" asp-action="Index">Veterinarske Službe</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Obavjestenje" asp-action="Index">Obavještenja</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

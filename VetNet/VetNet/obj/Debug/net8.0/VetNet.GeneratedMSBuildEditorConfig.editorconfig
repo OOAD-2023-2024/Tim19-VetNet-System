@@ -17,207 +17,207 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VetNet
 build_property.RootNamespace = VetNet
-build_property.ProjectDir = C:\ETF\Objektno-orijentisana-analiza-i-dizajn\VetNet\VetNet\VetNet\
+build_property.ProjectDir = C:\Users\mirza\Desktop\Fakultet\4_semestar\OOAD\projekat\Tim19-VetNet-System\VetNet\VetNet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\ETF\Objektno-orijentisana-analiza-i-dizajn\VetNet\VetNet\VetNet
+build_property.MSBuildProjectDirectory = C:\Users\mirza\Desktop\Fakultet\4_semestar\OOAD\projekat\Tim19-VetNet-System\VetNet\VetNet
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Home/Index.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Home/Privacy.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Izvjestajs/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqc1xDcmVhdGUuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Izvjestajs/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqc1xEZWxldGUuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Izvjestajs/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Izvjestajs/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqc1xFZGl0LmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Izvjestajs/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqc1xJbmRleC5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Ljubimacs/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNzXENyZWF0ZS5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Ljubimacs/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNzXERlbGV0ZS5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Ljubimacs/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNzXERldGFpbHMuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Ljubimacs/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNzXEVkaXQuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Ljubimacs/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNzXEluZGV4LmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Obavjestenje/Create.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Obavjestenje/Delete.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Obavjestenje/Details.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Obavjestenje/Edit.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Obavjestenje/Index.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Poslovnica/Create.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Poslovnica/Delete.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Poslovnica/Details.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Poslovnica/Edit.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Poslovnica/Index.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Pregleds/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZHNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Pregleds/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZHNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Pregleds/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZHNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Pregleds/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZHNcRWRpdC5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Pregleds/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZHNcSW5kZXguY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Recepts/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0c1xDcmVhdGUuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Recepts/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0c1xEZWxldGUuY3NodG1s
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Recepts/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0c1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Recepts/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0c1xFZGl0LmNzaHRtbA==
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Recepts/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0c1xJbmRleC5jc2h0bWw=
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Shared/Error.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzbas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzbas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzbas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhc1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzbas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhc1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzbas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzba/Create.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzba/Delete.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzba/Details.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzba/Edit.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/VeterinarskaSluzba/Index.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/_ViewImports.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/_ViewStart.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/ETF/Objektno-orijentisana-analiza-i-dizajn/VetNet/VetNet/VetNet/Views/Shared/_Layout.cshtml]
+[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-60zlr5wnai

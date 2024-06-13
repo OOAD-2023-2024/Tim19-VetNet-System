@@ -48,6 +48,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Ljubimacs/Create
+        [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
             ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
@@ -59,6 +60,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (ModelState.IsValid)
@@ -72,6 +74,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Ljubimacs/Edit/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -93,6 +96,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (id != ljubimac.Id)
@@ -125,6 +129,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Ljubimacs/Delete/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -146,6 +151,7 @@ namespace VetNet.Controllers
         // POST: Ljubimacs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var ljubimac = await _context.Ljubimac.FindAsync(id);

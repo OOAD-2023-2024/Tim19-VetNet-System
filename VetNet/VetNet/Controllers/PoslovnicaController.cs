@@ -11,7 +11,6 @@ using VetNet.Models;
 
 namespace VetNet.Controllers
 {
-    [Authorize(Roles = "Administrator, Apotekar")]
     public class PoslovnicaController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -46,6 +45,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Poslovnica/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             return View();
@@ -56,6 +56,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Create([Bind("id,naziv,adresa,brojTelefona,email")] Poslovnica poslovnica)
         {
             if (ModelState.IsValid)
@@ -68,6 +69,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Poslovnica/Edit/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -88,6 +90,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, [Bind("id,naziv,adresa,brojTelefona,email")] Poslovnica poslovnica)
         {
             if (id != poslovnica.id)
@@ -119,6 +122,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Poslovnica/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -139,6 +143,7 @@ namespace VetNet.Controllers
         // POST: Poslovnica/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var poslovnica = await _context.Poslovnica.FindAsync(id);

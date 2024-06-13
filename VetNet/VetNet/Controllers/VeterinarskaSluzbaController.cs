@@ -11,7 +11,6 @@ using VetNet.Models;
 
 namespace VetNet.Controllers
 {
-    [Authorize(Roles = "Administrator, Veterinar")]
     public class VeterinarskaSluzbaController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -46,6 +45,7 @@ namespace VetNet.Controllers
         }
 
         // GET: VeterinarskaSluzba/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             return View();
@@ -56,6 +56,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Create([Bind("id,naziv,adresa,brojTelefona,email")] VeterinarskaSluzba veterinarskaSluzba)
         {
             if (ModelState.IsValid)
@@ -68,6 +69,7 @@ namespace VetNet.Controllers
         }
 
         // GET: VeterinarskaSluzba/Edit/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -88,6 +90,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int id, [Bind("id,naziv,adresa,brojTelefona,email")] VeterinarskaSluzba veterinarskaSluzba)
         {
             if (id != veterinarskaSluzba.id)
@@ -117,6 +120,7 @@ namespace VetNet.Controllers
         }
 
         // GET: VeterinarskaSluzba/Delete/5
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -137,6 +141,7 @@ namespace VetNet.Controllers
         // POST: VeterinarskaSluzba/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var veterinarskaSluzba = await _context.VeterinarskaSluzba.FindAsync(id);
