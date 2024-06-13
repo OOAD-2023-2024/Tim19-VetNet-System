@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VetNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3bbabf39cd4fbceee90b7095a24aebb6394dbcf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+752d5e120c5eda146abe1f24114e57f4e41f82c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("VetNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VetNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
