@@ -5,7 +5,7 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    @if (User.IsInRole("Administrator"))
+        @if (User.IsInRole("Administrator") || User.IsInRole("Veterinar"))
     {
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Registracija</a>
