@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using VetNet.Models;
 
 namespace VetNet.Controllers
 {
+    [Authorize(Roles = "Administrator, Veterinar, Apotekar")]
     public class LjubimacController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -46,10 +48,15 @@ namespace VetNet.Controllers
         }
 
         // GET: Ljubimac/Create
+        [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
             ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View();
         }
@@ -59,6 +66,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (ModelState.IsValid)
@@ -68,12 +76,17 @@ namespace VetNet.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
             ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View(ljubimac);
         }
 
         // GET: Ljubimac/Edit/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,7 +99,11 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
@@ -95,6 +112,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (id != ljubimac.Id)
@@ -122,11 +140,16 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
         // GET: Ljubimac/Delete/5
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,6 +171,7 @@ namespace VetNet.Controllers
         // POST: Ljubimac/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var ljubimac = await _context.Ljubimac.FindAsync(id);

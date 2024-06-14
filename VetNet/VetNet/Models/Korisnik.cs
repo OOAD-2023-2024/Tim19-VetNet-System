@@ -7,12 +7,20 @@ namespace VetNet.Models
 {
     public class Korisnik : IdentityUser
     {
-        public enum Specijalizacija { KlinickaMedicinaMalihZivotinja, 
-            Parazitologija, 
-            SigurnostHrane, 
+        public enum Specijalizacija {
+            [Display(Name = "Klinička medicina malih životinja")]
+            KlinickaMedicinaMalihZivotinja,
+            [Display(Name = "Parazitologija")]
+            Parazitologija,
+            [Display(Name = "Sigurnost hrane")]
+            SigurnostHrane,
+            [Display(Name = "Teriogenelogija domaćih životinja")]
             TeriogenelogijaDomacihZivotinja,
+            [Display(Name = "Veterinarska epidemiologija i ekonomika")]
             VeterinarskaEpidemiologijaIEkonomika,
-            ZarazneBolestiZivotinja};
+            [Display(Name = "Zarazne bolesti životinja")]
+            ZarazneBolestiZivotinja
+        };
 
         [Display(Name = "Ime")]
         [Required(ErrorMessage = "Obavezna vrijednost")]
