@@ -62,7 +62,9 @@
                 @Html.DisplayFor(modelItem => item.Ljubimac.ime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Korisnik.Id)
+                @Html.DisplayFor(modelItem => item.Korisnik.ime)
+                @Html.Raw(" ")
+                @Html.DisplayFor(modelItem => item.Korisnik.prezime)
             </td>
             <td>
                 <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.Id">Detalji</a>

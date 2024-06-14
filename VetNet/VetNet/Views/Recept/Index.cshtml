@@ -14,6 +14,9 @@
                 @Html.DisplayNameFor(model => model.datumVrijeme)
             </th>
             <th>
+                Aktivan
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.lijek)
             </th>
             <th>
@@ -38,6 +41,9 @@
                 @Html.DisplayFor(modelItem => item.datumVrijeme)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.otvoren)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.lijek)
             </td>
             <td>
@@ -50,7 +56,9 @@
                 @Html.DisplayFor(modelItem => item.Ljubimac.ime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Korisnik.Id)
+                @Html.DisplayFor(modelItem => item.Korisnik.ime)
+                @Html.Raw(" ")
+                @Html.DisplayFor(modelItem => item.Korisnik.prezime)
             </td>
             <td>
                 <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.Id">Detalji</a>

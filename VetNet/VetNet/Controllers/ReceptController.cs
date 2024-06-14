@@ -85,7 +85,7 @@ namespace VetNet.Controllers
 
         [Authorize(Roles = "Administrator, Veterinar")]
         [HttpGet("Recepts/Create/{id}")]
-        public async Task<IActionResult> CreateForLjubimac(int id)
+        public IActionResult CreateForLjubimac(int id)
         {
             ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
@@ -95,7 +95,7 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         [HttpPost("Recepts/Create/{id}")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CreateForLjubimac([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
+        public async Task<IActionResult> CreateForLjubimac([Bind("datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
             var claimsIdentity = (ClaimsIdentity) this.User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
@@ -113,7 +113,7 @@ namespace VetNet.Controllers
         }
 
         // GET: Recepts/Edit/5
-        [Authorize(Roles = "Administrator, Veterinar")]
+        [Authorize(Roles = "Administrator, Veterinar, Apotekar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -136,7 +136,7 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Veterinar")]
+        [Authorize(Roles = "Administrator, Veterinar, Apotekar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
             if (id != recept.Id)
