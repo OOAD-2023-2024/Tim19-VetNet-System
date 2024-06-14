@@ -58,9 +58,11 @@
     </div>
 </div>
 <div class="row mt-3">
-    <div class="col text-start @if (!(User.IsInRole("Administrator") || User.IsInRole("Veterinar"))) {@Html.Raw("d-none");}">
+    <div class="col text-start @if (!(User.IsInRole("Administrator") || User.IsInRole("Veterinar"))) {
+    @Html.Raw("d-none")
+;}">
         <a asp-action="Edit" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button ">Uredi podatke o ljubimcu</a>
-        <a asp-action="Create" asp-controller="Recept" class="sek-pozadina text-dark add-new-button ">Dodaj recept</a>
+        <a asp-action="CreateForLjubimac" asp-controller="Recept" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button ">Dodaj recept</a>
         <a asp-action="CreateForLjubimac" asp-controller="Pregled" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button ">Dodaj pregled</a>
     </div>
     <div class="col text-end">

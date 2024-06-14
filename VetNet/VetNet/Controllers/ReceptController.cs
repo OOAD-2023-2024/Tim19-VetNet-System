@@ -58,6 +58,8 @@ namespace VetNet.Controllers
             return View();
         }
 
+
+
         // POST: Recepts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -66,7 +68,36 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
-            var claimsIdentity = (ClaimsIdentity)this.User.Identity;
+            var claimsIdentity = (ClaimsIdentity) this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            recept.KorisnikId = userId;
+            if (ModelState.IsValid)
+            {
+                _context.Add(recept);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
+            return View(recept);
+        }
+
+        [Authorize(Roles = "Administrator, Veterinar")]
+        [HttpGet("Recepts/Create/{id}")]
+        public async Task<IActionResult> CreateForLjubimac(int id)
+        {
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
+            return View();
+        }
+
+        [Authorize(Roles = "Administrator, Veterinar")]
+        [HttpPost("Recepts/Create/{id}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateForLjubimac([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
+        {
+            var claimsIdentity = (ClaimsIdentity) this.User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             var userId = claim.Value;
             recept.KorisnikId = userId;
@@ -119,14 +150,12 @@ namespace VetNet.Controllers
                 {
                     _context.Update(recept);
                     await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
+                } catch (DbUpdateConcurrencyException)
                 {
                     if (!ReceptExists(recept.Id))
                     {
                         return NotFound();
-                    }
-                    else
+                    } else
                     {
                         throw;
                     }

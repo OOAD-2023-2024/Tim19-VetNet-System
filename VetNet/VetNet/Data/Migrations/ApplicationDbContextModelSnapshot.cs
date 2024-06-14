@@ -513,6 +513,9 @@ namespace VetNet.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("otvoren")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("KorisnikId");

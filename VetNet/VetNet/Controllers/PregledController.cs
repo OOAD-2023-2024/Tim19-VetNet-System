@@ -69,6 +69,10 @@ namespace VetNet.Controllers
             {
                 _context.Add(pregled);
                 await _context.SaveChangesAsync();
+                if (pregled.terapija)
+                {
+                    return RedirectToAction("CreateForLjubimac", "Recept", new { id = pregled.LjubimacId });
+                }
                 return RedirectToAction(nameof(Index));
             }
             ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
