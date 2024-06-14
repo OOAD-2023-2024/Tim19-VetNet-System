@@ -29,12 +29,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="rasa" class="control-label"></label>
-                <select asp-for="rasa" class="form-control"></select>
+                <select asp-for="rasa" class="form-control" asp-items="ViewBag.rasa"></select>
                 <span asp-validation-for="rasa" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="spol" class="control-label"></label>
-                <select asp-for="spol" class="form-control"></select>
+                <select asp-for="spol" class="form-control" asp-items="ViewBag.spol"></select>
                 <span asp-validation-for="spol" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -45,6 +45,7 @@
             <div class="form-group">
                 <label asp-for="KorisnikId" class="control-label"></label>
                 <select asp-for="KorisnikId" class ="form-control" asp-items="ViewBag.KorisnikId"></select>
+                <span asp-validation-for="KorisnikId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

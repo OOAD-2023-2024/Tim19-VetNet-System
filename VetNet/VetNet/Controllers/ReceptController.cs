@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,6 @@ namespace VetNet.Controllers
     public class ReceptController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         public ReceptController(ApplicationDbContext context)
         {
             _context = context;
@@ -53,7 +53,7 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime");
             return View();
         }
@@ -66,13 +66,17 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
+            var claimsIdentity = (ClaimsIdentity)this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            recept.KorisnikId = userId;
             if (ModelState.IsValid)
             {
                 _context.Add(recept);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }
@@ -91,7 +95,7 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }
@@ -129,7 +133,7 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }

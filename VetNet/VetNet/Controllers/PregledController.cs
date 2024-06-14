@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -51,7 +52,7 @@ namespace VetNet.Controllers
         // GET: Pregleds/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime");
             return View();
         }
@@ -63,13 +64,14 @@ namespace VetNet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,razlog,postupak,dijagnoza,napomena,terapija,LjubimacId,KorisnikId")] Pregled pregled)
         {
+            //pregled.KorisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (ModelState.IsValid)
             {
                 _context.Add(pregled);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -87,7 +89,7 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -124,7 +126,7 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }

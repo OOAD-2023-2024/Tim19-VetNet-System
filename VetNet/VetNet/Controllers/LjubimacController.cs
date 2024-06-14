@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +10,6 @@ using VetNet.Models;
 
 namespace VetNet.Controllers
 {
-    [Authorize(Roles = "Administrator, Veterinar, Apotekar")]
     public class LjubimacController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,14 +19,14 @@ namespace VetNet.Controllers
             _context = context;
         }
 
-        // GET: Ljubimacs
+        // GET: Ljubimac
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Ljubimac.Include(l => l.Korisnik);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Ljubimacs/Details/5
+        // GET: Ljubimac/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,20 +45,20 @@ namespace VetNet.Controllers
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Create
-        [Authorize(Roles = "Administrator, Veterinar")]
+        // GET: Ljubimac/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View();
         }
 
-        // POST: Ljubimacs/Create
+        // POST: Ljubimac/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (ModelState.IsValid)
@@ -69,12 +67,13 @@ namespace VetNet.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Edit/5
-        [Authorize(Roles = "Administrator, Veterinar")]
+        // GET: Ljubimac/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -87,16 +86,15 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
-        // POST: Ljubimacs/Edit/5
+        // POST: Ljubimac/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,ime,datumRodjenja,slika,rasa,spol,qrCode,KorisnikId")] Ljubimac ljubimac)
         {
             if (id != ljubimac.Id)
@@ -124,12 +122,11 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Delete/5
-        [Authorize(Roles = "Administrator, Veterinar")]
+        // GET: Ljubimac/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -148,10 +145,9 @@ namespace VetNet.Controllers
             return View(ljubimac);
         }
 
-        // POST: Ljubimacs/Delete/5
+        // POST: Ljubimac/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var ljubimac = await _context.Ljubimac.FindAsync(id);
