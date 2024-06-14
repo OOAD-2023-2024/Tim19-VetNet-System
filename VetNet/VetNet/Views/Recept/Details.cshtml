@@ -58,7 +58,7 @@
 </div>  
 <div class="row mt-3">
     <div class="col text-start">
-        <a asp-action="Edit" class="sek-pozadina text-dark add-new-button">Uredi recept</a>
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button">Ažuriraj recept</a>
     </div>
     <div class="col text-end">
         <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Recepti</a>

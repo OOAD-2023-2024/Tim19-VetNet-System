@@ -14,7 +14,7 @@ namespace VetNet.Models
         [Display(Name = "Lijek")]
         public string lijek { get; set; }
         [Required(ErrorMessage = "Obavezna vrijednost")]
-        [Range(1, int.MaxValue, ErrorMessage = "Neispravna vrijednost doze")]
+        [Range(0, int.MaxValue, ErrorMessage = "Neispravna vrijednost doze")]
         [Display(Name = "Doza")]
         public int doza { get; set; }
         [Required(ErrorMessage = "Obavezna vrijednost")]

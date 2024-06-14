@@ -52,8 +52,12 @@ namespace VetNet.Controllers
         // GET: Pregleds/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             return View();
         }
 
@@ -78,7 +82,11 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -87,7 +95,11 @@ namespace VetNet.Controllers
         [HttpGet("Pregleds/Create/{id}")]
         public IActionResult CreateForLjubimac(int id)
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
             return View();
         }
@@ -111,7 +123,11 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -129,7 +145,11 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -166,7 +186,11 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }

@@ -99,6 +99,8 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
             {
                 Id = u.Id,
@@ -140,6 +142,8 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
             {
                 Id = u.Id,
