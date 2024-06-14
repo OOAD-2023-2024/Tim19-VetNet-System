@@ -28,6 +28,8 @@ using VetNet.Data;
 using VetNet.Models;
 using static VetNet.Models.Korisnik;
 
+
+
 namespace VetNet.Areas.Identity.Pages.Account
 {
     [Authorize(Roles = "Administrator, Veterinar")]
@@ -94,7 +96,7 @@ namespace VetNet.Areas.Identity.Pages.Account
 
             [Required]
             [Display(Name = "Tip korisnika")]
-            public int Role { get; set; }    
+            public int Role { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -163,10 +165,9 @@ namespace VetNet.Areas.Identity.Pages.Account
         public async Task OnGetAsync(string returnUrl = null)
         {
             ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
-            ViewData["specijalizacija"] = new SelectList(Enum.GetValues(typeof(Korisnik.Specijalizacija)).Cast<Korisnik.Specijalizacija>().Select( e => new
-            {
+            ViewData["specijalizacija"] = new SelectList(Enum.GetValues(typeof(Korisnik.Specijalizacija)).Cast<Korisnik.Specijalizacija>().Select(e => new {
                 Value = e,
-                Text = System.Text.RegularExpressions.Regex.Replace(e.ToString(),"(\\B[A-Z])"," $1")
+                Text = System.Text.RegularExpressions.Regex.Replace(e.ToString(), "(\\B[A-Z])", " $1")
             }), "Value", "Text");
             ViewData["PoslovnicaId"] = new SelectList(_context.Poslovnica, "id", "naziv");
             ViewData["VeterinarskaSluzbaId"] = new SelectList(_context.VeterinarskaSluzba, "id", "naziv");
@@ -192,7 +193,8 @@ namespace VetNet.Areas.Identity.Pages.Account
                 user.brojTelefona = Input.brojTelefona;
                 if (Input.Role == 3)
                     user.PoslovnicaId = Input.PoslovnicaId;
-                if (Input.Role == 4) {
+                if (Input.Role == 4)
+                {
                     user.VeterinarskaSluzbaId = Input.VeterinarskaSluzbaId;
                     user.specijalizacija = Input.specijalizacija;
                 }
@@ -223,19 +225,18 @@ namespace VetNet.Areas.Identity.Pages.Account
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
-                    
+
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
+                    } else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
 
-                    
-                    
+
+
                 }
                 foreach (var error in result.Errors)
                 {
@@ -251,9 +252,10 @@ namespace VetNet.Areas.Identity.Pages.Account
         {
             try
             {
-                return Activator.CreateInstance<Korisnik>();
-            }
-            catch
+                var user = Activator.CreateInstance<Korisnik>();
+                user.EmailConfirmed = true; // Set email confirmed to true by default
+                return user;
+            } catch
             {
                 throw new InvalidOperationException($"Can't create an instance of '{nameof(Korisnik)}'. " +
                     $"Ensure that '{nameof(Korisnik)}' is not an abstract class and has a parameterless constructor, or alternatively " +
@@ -267,7 +269,7 @@ namespace VetNet.Areas.Identity.Pages.Account
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<Korisnik>)_userStore;
+            return (IUserEmailStore<Korisnik>) _userStore;
         }
     }
 }
