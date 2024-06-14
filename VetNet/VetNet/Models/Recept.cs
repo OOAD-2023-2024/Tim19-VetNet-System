@@ -33,6 +33,10 @@ namespace VetNet.Models
         [Display(Name = "Veterinar")]
 
         public Korisnik? Korisnik { get; set; }
+
+        [Required(ErrorMessage ="Obavezna vrijednost!")]
+        [Display(Name = "Stanje recepta")]
+        public Boolean otvoren { get; set; } = true;
         public Recept() { }
 
     }

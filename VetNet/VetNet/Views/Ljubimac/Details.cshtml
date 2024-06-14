@@ -61,7 +61,7 @@
     <div class="col text-start @if (!(User.IsInRole("Administrator") || User.IsInRole("Veterinar"))) {@Html.Raw("d-none");}">
         <a asp-action="Edit" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button ">Uredi podatke o ljubimcu</a>
         <a asp-action="Create" asp-controller="Recept" class="sek-pozadina text-dark add-new-button ">Dodaj recept</a>
-        <a asp-action="Create" asp-controller="Pregled" class="sek-pozadina text-dark add-new-button ">Dodaj pregled</a>
+        <a asp-action="CreateForLjubimac" asp-controller="Pregled" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button ">Dodaj pregled</a>
     </div>
     <div class="col text-end">
         <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Ljubimci</a>

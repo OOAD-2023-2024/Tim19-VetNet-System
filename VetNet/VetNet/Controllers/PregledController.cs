@@ -76,6 +76,32 @@ namespace VetNet.Controllers
             return View(pregled);
         }
 
+        
+        [HttpGet("Pregleds/Create/{id}")]
+        public async Task<IActionResult> CreateForLjubimac(int id)
+        {
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
+            return View();
+        }
+
+
+        [HttpPost("Pregleds/Create/{id}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateForLjubimac([Bind("Id,datumVrijeme,razlog,postupak,dijagnoza,napomena,terapija,LjubimacId,KorisnikId")] Pregled pregled)
+        {
+            //pregled.KorisnikId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (ModelState.IsValid)
+            {
+                _context.Add(pregled);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["KorisnikId"] = new SelectList(_context.Users, "Id", "Id");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
+            return View(pregled);
+        }
+
         // GET: Pregleds/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
