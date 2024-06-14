@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -51,8 +52,12 @@ namespace VetNet.Controllers
         // GET: Pregleds/Create
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             return View();
         }
 
@@ -63,13 +68,66 @@ namespace VetNet.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,razlog,postupak,dijagnoza,napomena,terapija,LjubimacId,KorisnikId")] Pregled pregled)
         {
+            var claimsIdentity = (ClaimsIdentity)this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            pregled.KorisnikId = userId;
             if (ModelState.IsValid)
             {
                 _context.Add(pregled);
                 await _context.SaveChangesAsync();
+                if (pregled.terapija)
+                {
+                    return RedirectToAction("CreateForLjubimac", "Recept", new { id = pregled.LjubimacId });
+                }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
+            return View(pregled);
+        }
+
+        
+        [HttpGet("Pregleds/Create/{id}")]
+        public IActionResult CreateForLjubimac(int id)
+        {
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
+            return View();
+        }
+
+
+        [HttpPost("Pregleds/Create/{id}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateForLjubimac([Bind("datumVrijeme,razlog,postupak,dijagnoza,napomena,terapija,LjubimacId,KorisnikId")] Pregled pregled)
+        {
+            var claimsIdentity = (ClaimsIdentity)this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            pregled.KorisnikId = userId;
+            if (ModelState.IsValid)
+            {
+                _context.Add(pregled);
+                await _context.SaveChangesAsync();
+                if (pregled.terapija)
+                {
+                    return RedirectToAction("CreateForLjubimac", "Recept", new { id = pregled.LjubimacId });
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -87,7 +145,11 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }
@@ -124,7 +186,11 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", pregled.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", pregled.LjubimacId);
             return View(pregled);
         }

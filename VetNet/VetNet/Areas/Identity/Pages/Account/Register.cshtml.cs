@@ -5,6 +5,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -16,29 +18,38 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using Microsoft.Extensions.Logging;
+using VetNet.Data;
+using VetNet.Models;
+using static VetNet.Models.Korisnik;
+
+
 
 namespace VetNet.Areas.Identity.Pages.Account
 {
     [Authorize(Roles = "Administrator, Veterinar")]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly IUserStore<IdentityUser> _userStore;
-        private readonly IUserEmailStore<IdentityUser> _emailStore;
+        private readonly SignInManager<Korisnik> _signInManager;
+        private readonly UserManager<Korisnik> _userManager;
+        private readonly IUserStore<Korisnik> _userStore;
+        private readonly IUserEmailStore<Korisnik> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ApplicationDbContext _context;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
-            IUserStore<IdentityUser> userStore,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<Korisnik> userManager,
+            IUserStore<Korisnik> userStore,
+            SignInManager<Korisnik> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -46,6 +57,7 @@ namespace VetNet.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _context = context;
         }
 
         /// <summary>
@@ -83,8 +95,8 @@ namespace VetNet.Areas.Identity.Pages.Account
             public string Email { get; set; }
 
             [Required]
-            [Display(Name = "Role")]
-            public int Role { get; set; }    
+            [Display(Name = "Tip korisnika")]
+            public int Role { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -104,11 +116,61 @@ namespace VetNet.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Ime")]
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            public string ime { get; set; }
+
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            [Display(Name = "Prezime")]
+            public string prezime { get; set; }
+
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            [Display(Name = "Spol")]
+            public Spol spol { get; set; }
+
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            [Display(Name = "Adresa")]
+            public string adresa { get; set; }
+
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            [Display(Name = "Datum rođenja")]
+            public DateOnly datumRodjenja { get; set; }
+
+            [Phone(ErrorMessage = "Neispravan broj telefona")]
+            [Required(ErrorMessage = "Obavezna vrijednost")]
+            [Display(Name = "Broj Telefona")]
+            public string brojTelefona { get; set; }
+
+            [Display(Name = "Poslovnica")]
+            [ForeignKey("Poslovnica")]
+            [AllowNull]
+            public int? PoslovnicaId { get; set; }
+
+            public Poslovnica? Poslovnica { get; set; }
+
+            [Display(Name = "Veterinarska služba")]
+            [ForeignKey("VeterinarskaSluzba")]
+            [AllowNull]
+            public int? VeterinarskaSluzbaId { get; set; }
+
+            public VeterinarskaSluzba? VeterinarskaSluzba { get; set; }
+
+            [AllowNull]
+            [Display(Name = "Specijalizacija")]
+            public Specijalizacija? specijalizacija { get; set; }
         }
 
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
+            ViewData["specijalizacija"] = new SelectList(Enum.GetValues(typeof(Korisnik.Specijalizacija)).Cast<Korisnik.Specijalizacija>().Select(e => new {
+                Value = e,
+                Text = System.Text.RegularExpressions.Regex.Replace(e.ToString(), "(\\B[A-Z])", " $1")
+            }), "Value", "Text");
+            ViewData["PoslovnicaId"] = new SelectList(_context.Poslovnica, "id", "naziv");
+            ViewData["VeterinarskaSluzbaId"] = new SelectList(_context.VeterinarskaSluzba, "id", "naziv");
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
@@ -123,6 +185,19 @@ namespace VetNet.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.ime = Input.ime;
+                user.prezime = Input.prezime;
+                user.adresa = Input.adresa;
+                user.spol = Input.spol;
+                user.datumRodjenja = Input.datumRodjenja;
+                user.brojTelefona = Input.brojTelefona;
+                if (Input.Role == 3)
+                    user.PoslovnicaId = Input.PoslovnicaId;
+                if (Input.Role == 4)
+                {
+                    user.VeterinarskaSluzbaId = Input.VeterinarskaSluzbaId;
+                    user.specijalizacija = Input.specijalizacija;
+                }
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -150,19 +225,18 @@ namespace VetNet.Areas.Identity.Pages.Account
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
-                    
+
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
-                    }
-                    else
+                    } else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
 
-                    
-                    
+
+
                 }
                 foreach (var error in result.Errors)
                 {
@@ -174,27 +248,28 @@ namespace VetNet.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private Korisnik CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
-            }
-            catch
+                var user = Activator.CreateInstance<Korisnik>();
+                user.EmailConfirmed = true; // Set email confirmed to true by default
+                return user;
+            } catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
-                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(Korisnik)}'. " +
+                    $"Ensure that '{nameof(Korisnik)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<IdentityUser> GetEmailStore()
+        private IUserEmailStore<Korisnik> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<IdentityUser>)_userStore;
+            return (IUserEmailStore<Korisnik>) _userStore;
         }
     }
 }

@@ -1,67 +1,63 @@
 ﻿@model VetNet.Models.Pregled
 
-@{
-    ViewData["Title"] = "Edit";
-}
-
-<h1>Edit</h1>
-
-<h4>Pregled</h4>
+<h2 class="text-center">Uredi pregled</h2>
 <hr />
-<div class="row">
+<div class="row sek-pozadina mb-3 justify-content-center">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+            <div class="form-floating mb-3 mt-3">
+                <input placeholder="" asp-for="datumVrijeme" class="form-control moj-outline" />
                 <label asp-for="datumVrijeme" class="control-label"></label>
-                <input asp-for="datumVrijeme" class="form-control" />
                 <span asp-validation-for="datumVrijeme" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder= asp-for="razlog" class="form-control moj-outline" />
                 <label asp-for="razlog" class="control-label"></label>
-                <input asp-for="razlog" class="form-control" />
                 <span asp-validation-for="razlog" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder= asp-for="postupak" class="form-control moj-outline" />
                 <label asp-for="postupak" class="control-label"></label>
-                <input asp-for="postupak" class="form-control" />
                 <span asp-validation-for="postupak" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder= asp-for="dijagnoza" class="form-control moj-outline" />
                 <label asp-for="dijagnoza" class="control-label"></label>
-                <input asp-for="dijagnoza" class="form-control" />
                 <span asp-validation-for="dijagnoza" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder= asp-for="napomena" class="form-control moj-outline" />
                 <label asp-for="napomena" class="control-label"></label>
-                <input asp-for="napomena" class="form-control" />
                 <span asp-validation-for="napomena" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
+            <div class="form-group mb-3 form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="terapija" /> @Html.DisplayNameFor(model => model.terapija)
                 </label>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input asp-for="LjubimacId" class="form-control moj-outline" readonly hidden />
+                <select asp-for="LjubimacId" class="form-control moj-outline" asp-items="ViewBag.LjubimacId" disabled></select>
                 <label asp-for="LjubimacId" class="control-label"></label>
-                <select asp-for="LjubimacId" class="form-control" asp-items="ViewBag.LjubimacId"></select>
                 <span asp-validation-for="LjubimacId" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input asp-for="KorisnikId" class="form-control moj-outline" readonly hidden />
+                <select asp-for="KorisnikId" class="form-control moj-outline" asp-items="ViewBag.KorisnikId" disabled></select>
                 <label asp-for="KorisnikId" class="control-label"></label>
-                <select asp-for="KorisnikId" class="form-control" asp-items="ViewBag.KorisnikId"></select>
                 <span asp-validation-for="KorisnikId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group mb-3">
+                <input type="submit" value="Potvrdi" class="btn prim-pozadina moj-outline" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Pregledi</a>
 </div>
 
 @section Scripts {

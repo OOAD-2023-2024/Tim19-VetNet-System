@@ -1,10 +1,15 @@
 ﻿@model IEnumerable<VetNet.Models.Poslovnica>
 
 
-<h1 class="text-center ">Poslovnice</h1>
+<h1 class="text-center ">Apoteke</h1>
 
 <p>
-    <a asp-action="Create" class="sek-pozadina text-dark add-new-button">Dodaj novu poslovnicu</a>
+    <a asp-action="Create" class="sek-pozadina text-dark add-new-button
+@if (User.IsInRole("Administrator")){
+    @Html.Raw("visible")
+;}else{
+    @Html.Raw("invisible")
+;}">Dodaj novu poslovnicu</a>
 </p>
 <table class="table sek-pozadina">
     <thead>
@@ -25,26 +30,31 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr class="text-center">
-            <td>
-                @Html.DisplayFor(modelItem => item.naziv)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.adresa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.brojTelefona)
-            </td>
-            <td class="text-dark text-decoration-none">
-                @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                <a asp-action="Edit" class="text-dark text-decoration-none" asp-route-id="@item.id">Uredi</a> |
-                <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.id">Detalji</a> |
-                <a asp-action="Delete" class="link-danger text-decoration-none" asp-route-id="@item.id">Obriši</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.adresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.brojTelefona)
+                </td>
+                <td class="text-dark text-decoration-none">
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.id">Detalji</a>
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        @Html.Raw("|")
+                        <a asp-action="Edit" class="text-dark text-decoration-none" asp-route-id="@item.id">Uredi</a> @Html.Raw("|")
+                        <a asp-action="Delete" class="link-danger text-decoration-none" asp-route-id="@item.id">Obriši</a>
+                    }
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

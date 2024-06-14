@@ -1,17 +1,13 @@
 ﻿@model IEnumerable<VetNet.Models.Izvjestaj>
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-<h1>Index</h1>
+<h1 class="text-center">Izvještaji</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="sek-pozadina text-dark add-new-button">Dodaj novi izvještaj</a>
 </p>
-<table class="table">
+<table class="table sek-pozadina">
     <thead>
-        <tr>
+        <tr class="text-center">
             <th>
                 @Html.DisplayNameFor(model => model.datumVrijeme)
             </th>
@@ -22,20 +18,23 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.datumVrijeme)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.sadrzaj)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr class="text-center">
+                <td>
+                    @Html.DisplayFor(modelItem => item.datumVrijeme)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.sadrzaj)
+                </td>
+                <td>
+                    <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.id">Detalji</a>
+                    |
+                    <a asp-action="Edit" class="text-dark text-decoration-none" asp-route-id="@item.id">Uredi</a>
+                    |
+                    <a asp-action="Delete" class="link-danger text-decoration-none" asp-route-id="@item.id">Obriši</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

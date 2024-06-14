@@ -1,77 +1,107 @@
 ﻿@page
 @model RegisterModel
 
-<h1 class="text-center ">Registracija novog korisnika</h1>
-
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
+<h2 class="text-center ">Registracija novog korisnika</h2>
+<hr />
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+<div class="row sek-pozadina mb-3 justify-content-center">
+        <div class="col-md-4">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3 mt-3">
+                <input asp-for="Input.ime" class="form-control moj-outline" aria-required="true" placeholder="" />
+                <label asp-for="Input.ime">Ime</label>
+                <span asp-validation-for="Input.ime" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input asp-for="Input.prezime" class="form-control moj-outline" aria-required="true" placeholder="" />
+                <label asp-for="Input.prezime">Prezime</label>
+                <span asp-validation-for="Input.prezime" class="text-danger"></span>
+            </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <select asp-for="Input.spol" class="form-control moj-outline" asp-items="ViewBag.spol"></select>
+                <label asp-for="Input.spol" class="control-label"></label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input asp-for="Input.adresa" class="form-control moj-outline" aria-required="true" placeholder="" />
+                <label asp-for="Input.adresa">Adresa</label>
+                <span asp-validation-for="Input.adresa" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input asp-for="Input.brojTelefona" class="form-control moj-outline" aria-required="true" placeholder="" />
+                <label asp-for="Input.brojTelefona">Broj telefona</label>
+                <span asp-validation-for="Input.brojTelefona" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 d-none" id="specijalizacijaDiv">
+                <select asp-for="Input.specijalizacija" class="form-control moj-outline" asp-items="ViewBag.specijalizacija"></select>
+                <label asp-for="Input.specijalizacija" class="control-label"></label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-floating mb-3 mt-3">
+                <input asp-for="Input.datumRodjenja" type="date" class="form-control moj-outline" aria-required="true" placeholder="" />
+                <label asp-for="Input.datumRodjenja">Datum rođenja</label>
+                <span asp-validation-for="Input.datumRodjenja" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control moj-outline" autocomplete="username" aria-required="true" placeholder="" />
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <input asp-for="Input.Password" class="form-control moj-outline" autocomplete="new-password" aria-required="true" placeholder="" />
                 <label asp-for="Input.Password">Password</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <input asp-for="Input.ConfirmPassword" class="form-control moj-outline" autocomplete="new-password" aria-required="true" placeholder="" />
+                <label asp-for="Input.ConfirmPassword">Potvrdi password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
 
-
-            <div class="mb-3 @if (User.IsInRole("Administrator")){@Html.Raw("visible");} else{@Html.Raw("invisible");}">
-                <select class="form-select" aria-label="Tip korisnika" asp-for="Input.Role">
-                    <option selected value="2">Tip korisnika</option>
-                    <option value="2">Vlasnik</option>
+            <div class="form-floating mb-3 @if (!User.IsInRole("Administrator")){
+            @Html.Raw("d-none");}">
+                <select class="form-control moj-outline" id="userSelect" aria-label="Tip korisnika" asp-for="Input.Role">
+                    <option value="2" selected>Vlasnik</option>
                     <option value="3">Apotekar</option>
                     <option value="4">Veterinar</option>
                     <option value="1">Administrator</option>
                 </select>
+                <label asp-for="Input.Role" class="control-label"></label>
             </div>
-
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
-    </div>
-
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
-                                article
-                                about setting up this ASP.NET application to support logging in via external services
-                            </a>.
-                        </p>
-                    </div>
-                } else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div>
+            <div class="form-floating mb-3 d-none" id="poslovnicaDiv">
+                <select asp-for="Input.PoslovnicaId" class="form-control moj-outline" asp-items="ViewBag.PoslovnicaId"></select>
+                <label asp-for="Input.PoslovnicaId" class="control-label"></label>
+            </div>
+            <div class="form-floating mb-3 d-none" id="veterinarskaSluzbaDiv">
+                <select asp-for="Input.VeterinarskaSluzbaId" class="form-control moj-outline" asp-items="ViewBag.VeterinarskaSluzbaId"></select>
+                <label asp-for="Input.VeterinarskaSluzbaId" class="control-label"></label>
+            </div>
+            <button id="registerSubmit" type="submit" class="btn prim-pozadina moj-outline mb-3">Potvrdi</button>
+        </div>
 </div>
+</form>
+<script>
+    document.getElementById('userSelect').addEventListener('change', function () {
+        var poslovnicaDiv = document.getElementById('poslovnicaDiv');
+        var veterinarskaSluzbaDiv = document.getElementById('veterinarskaSluzbaDiv');
+        var specijalizacijaDiv = document.getElementById('specijalizacijaDiv');
+        if (this.value == 3) {
+            poslovnicaDiv.classList.remove("d-none");
+            veterinarskaSluzbaDiv.classList.add("d-none");
+            specijalizacijaDiv.classList.add("d-none");
+        }
+        else if (this.value == 4) {
+            veterinarskaSluzbaDiv.classList.remove("d-none");
+            specijalizacijaDiv.classList.remove("d-none");
+            poslovnicaDiv.classList.add("d-none");
+        }
+        else {
+            poslovnicaDiv.classList.add("d-none");
+            veterinarskaSluzbaDiv.classList.add("d-none");
+            specijalizacijaDiv.classList.add("d-none");
+        }
+    });
+</script>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

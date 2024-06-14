@@ -17,207 +17,215 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = VetNet
 build_property.RootNamespace = VetNet
-build_property.ProjectDir = C:\Users\mirza\Desktop\Fakultet\4_semestar\OOAD\projekat\Tim19-VetNet-System\VetNet\VetNet\
+build_property.ProjectDir = C:\Users\haris\Desktop\VetNet\VetNet\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\mirza\Desktop\Fakultet\4_semestar\OOAD\projekat\Tim19-VetNet-System\VetNet\VetNet
+build_property.MSBuildProjectDirectory = C:\Users\haris\Desktop\VetNet\VetNet
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Home/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Home/Privacy.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Izvjestaj/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Izvjestaj/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Izvjestaj/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Izvjestaj/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Izvjestaj/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Izvjestaj/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Ljubimac/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Ljubimac/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Ljubimac/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Ljubimac/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Ljubimac/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Ljubimac/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGp1YmltYWNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Obavjestenje/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Obavjestenje/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Obavjestenje/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Obavjestenje/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Obavjestenje/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Obavjestenje/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2Jhdmplc3RlbmplXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Poslovnica/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Poslovnica/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Poslovnica/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Poslovnica/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Poslovnica/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Poslovnica/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zbG92bmljYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/CreateForLjubimac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxDcmVhdGVGb3JManViaW1hYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Pregled/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Pregled/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZ2xlZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/CreateForLjubimac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XENyZWF0ZUZvckxqdWJpbWFjLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Recept/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Recept/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXB0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/Error.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Create.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/VeterinarskaSluzba/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Delete.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/VeterinarskaSluzba/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Details.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/VeterinarskaSluzba/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Edit.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/VeterinarskaSluzba/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/VeterinarskaSluzba/Index.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/VeterinarskaSluzba/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmV0ZXJpbmFyc2thU2x1emJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/_ViewImports.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/_ViewStart.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/mirza/Desktop/Fakultet/4_semestar/OOAD/projekat/Tim19-VetNet-System/VetNet/VetNet/Views/Shared/_Layout.cshtml]
+[C:/Users/haris/Desktop/VetNet/VetNet/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-60zlr5wnai

@@ -32,7 +32,11 @@
 </div>
 <div class="row mt-3">
     <div class="col text-start">
-        <a asp-action="Edit" asp-route-id="@Model?.id" class="sek-pozadina text-dark add-new-button">Uredi poslovnicu</a>
+        <a asp-action="Edit" asp-route-id="@Model?.id" class="sek-pozadina text-dark add-new-button @if (User.IsInRole("Administrator")){
+    @Html.Raw("visible")
+;}else{
+    @Html.Raw("invisible")
+;}">Uredi poslovnicu</a>
     </div>
     <div class="col text-end">
         <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Poslovnice</a>

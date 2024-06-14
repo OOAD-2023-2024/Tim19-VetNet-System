@@ -1,0 +1,53 @@
+﻿@model VetNet.Models.Recept
+
+<h2 class="text-center">Dodaj recept</h2>
+
+<hr />
+<div class="row sek-pozadina mb-3 justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="CreateForLjubimac">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating mb-3 mt-3">
+                <input placeholder="" asp-for="datumVrijeme" class="form-control moj-outline" />
+                <label asp-for="datumVrijeme" class="control-label"></label>
+                <span asp-validation-for="datumVrijeme" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="lijek" class="form-control moj-outline" />
+                <label asp-for="lijek" class="control-label"></label>
+                <span asp-validation-for="lijek" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="doza" class="form-control moj-outline" />
+                <label asp-for="doza" class="control-label"></label>
+                <span asp-validation-for="doza" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="napomena" class="form-control moj-outline" />
+                <label asp-for="napomena" class="control-label"></label>
+                <span asp-validation-for="napomena" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 d-none">
+                <select asp-for="LjubimacId" class="form-control moj-outline" asp-items="ViewBag.LjubimacId"></select>
+                <label asp-for="LjubimacId" class="control-label"></label>
+            </div>
+            <div class="form-floating mb-3 d-none">
+                <select asp-for="KorisnikId" class="form-control moj-outline" asp-items="ViewBag.KorisnikId"></select>
+                <label asp-for="KorisnikId" class="control-label"></label>
+            </div>
+            <div class="form-group mb-3">
+                <input type="submit" value="Create" class="btn prim-pozadina moj-outline" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Recepti</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\",
+  "WorkspaceRootPath": "C:\\Users\\haris\\Desktop\\VetNet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\mirza\\desktop\\fakultet\\4_semestar\\ooad\\projekat\\tim19-vetnet-system\\vetnet\\vetnet\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\mirza\\desktop\\fakultet\\4_semestar\\ooad\\projekat\\tim19-vetnet-system\\vetnet\\vetnet\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\mirza\\desktop\\fakultet\\4_semestar\\ooad\\projekat\\tim19-vetnet-system\\vetnet\\vetnet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\mirza\\desktop\\fakultet\\4_semestar\\ooad\\projekat\\tim19-vetnet-system\\vetnet\\vetnet\\controllers\\obavjestenjecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\controllers\\obavjestenjecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\haris\\desktop\\vetnet\\vetnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,54 +19,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAIwG8AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T12:15:05.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "VetNet\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "VetNet\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAZAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\haris\\Desktop\\VetNet\\VetNet\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VetNet\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\haris\\Desktop\\VetNet\\VetNet\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VetNet\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAiwDkAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-13T12:13:34.229Z",
+              "WhenOpened": "2024-06-14T21:33:45.538Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 157,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "VetNet\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-13T12:06:56.345Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ObavjestenjeController.cs",
-              "DocumentMoniker": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Controllers\\ObavjestenjeController.cs",
-              "RelativeDocumentMoniker": "VetNet\\Controllers\\ObavjestenjeController.cs",
-              "ToolTip": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\VetNet\\Controllers\\ObavjestenjeController.cs",
-              "RelativeToolTip": "VetNet\\Controllers\\ObavjestenjeController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwB4AAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T12:06:22.37Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }

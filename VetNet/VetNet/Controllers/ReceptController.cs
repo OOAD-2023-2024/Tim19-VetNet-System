@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +17,6 @@ namespace VetNet.Controllers
     public class ReceptController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         public ReceptController(ApplicationDbContext context)
         {
             _context = context;
@@ -53,10 +53,16 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime");
             return View();
         }
+
+
 
         // POST: Recepts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -66,19 +72,63 @@ namespace VetNet.Controllers
         [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Create([Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
+            var claimsIdentity = (ClaimsIdentity) this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            recept.KorisnikId = userId;
             if (ModelState.IsValid)
             {
                 _context.Add(recept);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
+            return View(recept);
+        }
+
+        [Authorize(Roles = "Administrator, Veterinar")]
+        [HttpGet("Recepts/Create/{id}")]
+        public IActionResult CreateForLjubimac(int id)
+        {
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
+            ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", id);
+            return View();
+        }
+
+        [Authorize(Roles = "Administrator, Veterinar")]
+        [HttpPost("Recepts/Create/{id}")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateForLjubimac([Bind("datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
+        {
+            var claimsIdentity = (ClaimsIdentity) this.User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var userId = claim.Value;
+            recept.KorisnikId = userId;
+            if (ModelState.IsValid)
+            {
+                _context.Add(recept);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }
 
         // GET: Recepts/Edit/5
-        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -91,7 +141,11 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }
@@ -101,35 +155,39 @@ namespace VetNet.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,datumVrijeme,lijek,doza,napomena,LjubimacId,KorisnikId")] Recept recept)
         {
             if (id != recept.Id)
             {
                 return NotFound();
             }
-
+            if(recept.doza <= 0)
+            {
+                recept.otvoren = false;
+            }
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Update(recept);
                     await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
+                } catch (DbUpdateConcurrencyException)
                 {
                     if (!ReceptExists(recept.Id))
                     {
                         return NotFound();
-                    }
-                    else
+                    } else
                     {
                         throw;
                     }
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", recept.KorisnikId);
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
             ViewData["LjubimacId"] = new SelectList(_context.Ljubimac, "Id", "ime", recept.LjubimacId);
             return View(recept);
         }

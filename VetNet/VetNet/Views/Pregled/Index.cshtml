@@ -1,17 +1,15 @@
 ﻿@model IEnumerable<VetNet.Models.Pregled>
 
-@{
-    ViewData["Title"] = "Index";
+<h1 class="text-center ">Pregledi</h1>
+@if (User.IsInRole("Administrator") || User.IsInRole("Veterinar"))
+{
+    <p>
+        <a asp-action="Create" class="sek-pozadina text-dark add-new-button">Dodaj novi pregled</a>
+    </p>
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table class="table sek-pozadina">
     <thead>
-        <tr>
+        <tr class="text-center">
             <th>
                 @Html.DisplayNameFor(model => model.datumVrijeme)
             </th>
@@ -41,7 +39,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="text-center">
             <td>
                 @Html.DisplayFor(modelItem => item.datumVrijeme)
             </td>
@@ -64,12 +62,18 @@
                 @Html.DisplayFor(modelItem => item.Ljubimac.ime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Korisnik.Id)
+                @Html.DisplayFor(modelItem => item.Korisnik.ime)
+                @Html.Raw(" ")
+                @Html.DisplayFor(modelItem => item.Korisnik.prezime)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Details" class="text-dark text-decoration-none" asp-route-id="@item.Id">Detalji</a>
+                @if (User.IsInRole("Administrator") || User.IsInRole("Veterinar"))
+                {
+                    @Html.Raw("|")
+                    <a asp-action="Edit" class="text-dark text-decoration-none" asp-route-id="@item.Id">Uredi</a> @Html.Raw("|")
+                    <a asp-action="Delete" class="link-danger text-decoration-none" asp-route-id="@item.Id">Obriši</a>
+                }
             </td>
         </tr>
 }

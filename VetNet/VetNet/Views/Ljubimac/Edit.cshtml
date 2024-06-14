@@ -1,62 +1,56 @@
 ﻿@model VetNet.Models.Ljubimac
 
-@{
-    ViewData["Title"] = "Edit";
-}
-
-<h1>Edit</h1>
-
-<h4>Ljubimac</h4>
+<h2 class="text-center">Uredi podatke o ljubimcu</h2>
 <hr />
-<div class="row">
+<div class="row sek-pozadina mb-3 justify-content-center">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+            <div class="form-floating mb-3 mt-3">
+                <input placeholder="" asp-for="ime" class="form-control moj-outline" />
                 <label asp-for="ime" class="control-label"></label>
-                <input asp-for="ime" class="form-control" />
                 <span asp-validation-for="ime" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="datumRodjenja" class="form-control moj-outline" />
                 <label asp-for="datumRodjenja" class="control-label"></label>
-                <input asp-for="datumRodjenja" class="form-control" />
                 <span asp-validation-for="datumRodjenja" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="slika" class="form-control moj-outline" />
                 <label asp-for="slika" class="control-label"></label>
-                <input asp-for="slika" class="form-control" />
                 <span asp-validation-for="slika" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <select asp-for="rasa" class="form-control moj-outline" asp-items="ViewBag.rasa"></select>
                 <label asp-for="rasa" class="control-label"></label>
-                <select asp-for="rasa" class="form-control"></select>
                 <span asp-validation-for="rasa" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <select asp-for="spol" class="form-control moj-outline" asp-items="ViewBag.spol"></select>
                 <label asp-for="spol" class="control-label"></label>
-                <select asp-for="spol" class="form-control"></select>
                 <span asp-validation-for="spol" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <input placeholder="" asp-for="qrCode" class="form-control moj-outline" />
                 <label asp-for="qrCode" class="control-label"></label>
-                <input asp-for="qrCode" class="form-control" />
                 <span asp-validation-for="qrCode" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-floating mb-3">
+                <select asp-for="KorisnikId" class="form-control moj-outline" asp-items="ViewBag.KorisnikId"></select>
                 <label asp-for="KorisnikId" class="control-label"></label>
-                <select asp-for="KorisnikId" class="form-control" asp-items="ViewBag.KorisnikId"></select>
                 <span asp-validation-for="KorisnikId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group mb-3">
+                <input type="submit" value="Save" class="btn prim-pozadina moj-outline" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Ljubimci</a>
 </div>
 
 @section Scripts {

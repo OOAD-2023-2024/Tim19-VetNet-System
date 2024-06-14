@@ -1,54 +1,66 @@
 ﻿@model VetNet.Models.Recept
 
-@{
-    ViewData["Title"] = "Details";
-}
+<h2 class="text-center">Detalji o receptu</h2>
 
-<h1>Details</h1>
-
-<div>
-    <h4>Recept</h4>
+<div class="sek-pozadina p-3">
+    <h4 class="text-center">@Html.DisplayFor(model => model.Ljubimac.ime)</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
+    <div class="row mb-3">
+        <div class="col text-end">
             @Html.DisplayNameFor(model => model.datumVrijeme)
-        </dt>
-        <dd class = "col-sm-10">
+        </div>
+        <div class="col">
             @Html.DisplayFor(model => model.datumVrijeme)
-        </dd>
-        <dt class = "col-sm-2">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col text-end">
+            Aktivan
+        </div>
+        <div class="col">
+            @Html.DisplayFor(model => model.otvoren)
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col text-end">
             @Html.DisplayNameFor(model => model.lijek)
-        </dt>
-        <dd class = "col-sm-10">
+        </div>
+        <div class="col">
             @Html.DisplayFor(model => model.lijek)
-        </dd>
-        <dt class = "col-sm-2">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col text-end">
             @Html.DisplayNameFor(model => model.doza)
-        </dt>
-        <dd class = "col-sm-10">
+        </div>
+        <div class="col text-black">
             @Html.DisplayFor(model => model.doza)
-        </dd>
-        <dt class = "col-sm-2">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col text-end">
             @Html.DisplayNameFor(model => model.napomena)
-        </dt>
-        <dd class = "col-sm-10">
+        </div>
+        <div class="col text-black">
             @Html.DisplayFor(model => model.napomena)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ljubimac)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ljubimac.ime)
-        </dd>
-        <dt class = "col-sm-2">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col text-end">
             @Html.DisplayNameFor(model => model.Korisnik)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Korisnik.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+        </div>
+        <div class="col text-black">
+            @Html.DisplayFor(model => model.Korisnik.ime)
+            @Html.Raw(" ")
+            @Html.DisplayFor(model => model.Korisnik.prezime)
+        </div>
+    </div>
+</div>  
+<div class="row mt-3">
+    <div class="col text-start">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="sek-pozadina text-dark add-new-button">Ažuriraj recept</a>
+    </div>
+    <div class="col text-end">
+        <a asp-action="Index" class="sek-pozadina text-dark add-new-button">Recepti</a>
+    </div>
 </div>

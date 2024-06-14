@@ -21,14 +21,14 @@ namespace VetNet.Controllers
             _context = context;
         }
 
-        // GET: Ljubimacs
+        // GET: Ljubimac
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Ljubimac.Include(l => l.Korisnik);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Ljubimacs/Details/5
+        // GET: Ljubimac/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -47,15 +47,21 @@ namespace VetNet.Controllers
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Create
+        // GET: Ljubimac/Create
         [Authorize(Roles = "Administrator, Veterinar")]
         public IActionResult Create()
         {
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id");
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime");
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View();
         }
 
-        // POST: Ljubimacs/Create
+        // POST: Ljubimac/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -69,11 +75,17 @@ namespace VetNet.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Edit/5
+        // GET: Ljubimac/Edit/5
         [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -87,11 +99,17 @@ namespace VetNet.Controllers
             {
                 return NotFound();
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
-        // POST: Ljubimacs/Edit/5
+        // POST: Ljubimac/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -124,11 +142,17 @@ namespace VetNet.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KorisnikId"] = new SelectList(_context.Korisnik, "Id", "Id", ljubimac.KorisnikId);
+            ViewData["rasa"] = new SelectList(Enum.GetValues(typeof(Ljubimac.Rasa)).Cast<Ljubimac.Rasa>());
+            ViewData["spol"] = new SelectList(Enum.GetValues(typeof(Spol)).Cast<Spol>());
+            ViewData["KorisnikId"] = new SelectList(_context.Users.Select(u => new
+            {
+                Id = u.Id,
+                ime = u.ime + " " + u.prezime
+            }), "Id", "ime", ljubimac.KorisnikId);
             return View(ljubimac);
         }
 
-        // GET: Ljubimacs/Delete/5
+        // GET: Ljubimac/Delete/5
         [Authorize(Roles = "Administrator, Veterinar")]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -148,7 +172,7 @@ namespace VetNet.Controllers
             return View(ljubimac);
         }
 
-        // POST: Ljubimacs/Delete/5
+        // POST: Ljubimac/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Administrator, Veterinar")]
