@@ -26,7 +26,7 @@
             </div>
 
 
-            <div class="mb-3 @if (User.IsInRole("Administrator")){@Html.Raw("visible");} else{@Html.Raw("invisible");}">
+            <div class="mb-3 @if (!User.IsInRole("Administrator")){@Html.Raw("d-none");}">
                 <select class="form-select" aria-label="Tip korisnika" asp-for="Input.Role">
                     <option selected value="2">Tip korisnika</option>
                     <option value="2">Vlasnik</option>

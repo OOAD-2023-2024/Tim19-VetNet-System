@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using VetNet.Models;
 
 namespace VetNet.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<Korisnik>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-        public DbSet<Korisnik> Korisnik { get; set; }
         public DbSet<Ljubimac> Ljubimac { get; set; }
         public DbSet<Pregled> Pregled { get; set; }
         public DbSet<Izvjestaj> Izvjestaj { get; set; }

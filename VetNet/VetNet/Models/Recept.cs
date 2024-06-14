@@ -26,13 +26,13 @@ namespace VetNet.Models
         public int LjubimacId { get; set; }
         [Display(Name = "Ljubimac")]
 
-        public Ljubimac Ljubimac { get; set; }
+        public Ljubimac? Ljubimac { get; set; }
         [ForeignKey("Korisnik")]
         [Display(Name = "Veterinar")]
         public string KorisnikId { get; set; }
         [Display(Name = "Veterinar")]
 
-        public Korisnik Korisnik { get; set; }
+        public Korisnik? Korisnik { get; set; }
         public Recept() { }
 
     }

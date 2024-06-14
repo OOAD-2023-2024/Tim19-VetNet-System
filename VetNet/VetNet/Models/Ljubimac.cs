@@ -28,10 +28,10 @@ namespace VetNet.Models
         [Display(Name = "QR Code")]
         public string qrCode { get; set; }
         [ForeignKey("Korisnik")]
-        [Display(Name = "Vlasnik")]
+        [Display(Name = "VlasnikID")]
         public string KorisnikId { get; set; }
         [Display(Name = "Vlasnik")]
-        public Korisnik Korisnik { get; set; }
+        public Korisnik? Korisnik { get; set; }
         public Ljubimac() { }
     }
 }
