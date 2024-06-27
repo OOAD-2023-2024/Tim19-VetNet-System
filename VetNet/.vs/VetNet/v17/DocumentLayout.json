@@ -1,47 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\haris\\Desktop\\VetNet\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|c:\\users\\haris\\desktop\\vetnet\\vetnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A62A80B6-AC7B-484A-A669-096A7982968A}|VetNet\\VetNet.csproj|solutionrelative:vetnet\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\mirza\\Desktop\\Fakultet\\4_semestar\\OOAD\\projekat\\Tim19-VetNet-System\\VetNet\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\haris\\Desktop\\VetNet\\VetNet\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "VetNet\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\haris\\Desktop\\VetNet\\VetNet\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "VetNet\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAiwDkAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-14T21:33:45.538Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 157,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
